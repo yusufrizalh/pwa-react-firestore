@@ -1,0 +1,15 @@
+{
+    "short_name": "React Firestore",
+    "name": "React Firestore and Progressive Web App",
+    "icons": [
+        {
+            "src": "rz-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#222222",
+    "theme_color": "#222222",
+    "display": "standalone"
+}

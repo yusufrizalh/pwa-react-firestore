@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>React App</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    
+        .App {
+            text-align: center;
+        }
+    
+        .App-header {
+            background-color: rgb(129, 122, 230);
+            height: 150px;
+            padding: 20px;
+            color: white;
+        }
+    
+        .App-intro {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="App">
+            <div class="App-header">
+                <h3>Hello Inixindo</h3>
+            </div>
+            <p class="App-intro">
+                <p>Loading React Site ...</p>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+                    // Registration was successful
+                    console.log('Registrasi Service Worker Berhasil: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('Registrasi Service Worker Gagal: ', err);
+                }).catch(function (err) {
+                    console.log(err)
+                });
+            });
+        } else {
+            console.log('Service Worker tidak support pada browser');
+        }
+    </script>
+</body>
+</html>
